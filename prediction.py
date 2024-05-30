@@ -50,28 +50,3 @@ def classification(data, data_main, change):
 
     return data, classification_accuracy
 
-
-
-# def plot_results(ticker, df, data, data_tr, pred, change):
-#     plt.figure(figsize=(12, 6))
-#     y_test_change = data_tr.loc['2021-01-01':]
-#     y_test_change = np.array(y_test_change.iloc[30:, 3]) #takes only Close value
-#     plt.plot(y_test_change, color='green', label='Real Price')
-#     plt.plot(pred, color='purple', label='Predicted Price')
-#     plt.title(f'{ticker}')
-#     plt.xlabel('Time')
-#     plt.ylabel('Price')
-#     plt.legend()
-#     plt.show()
-#
-#     if change == 'absolute':
-#
-#         pd.concat([data.loc['2021-01-01':]['Close'], pd.DataFrame(data.loc['2021-01-01':]['Close'].shift(1) + df.Close_prediction_change)], axis=1)[31:].plot(figsize=(12, 8))
-#         plt.title('Close Absolute Change Prediction')
-#
-#         pd.concat([data.loc['2021-01-01':]['Close'][31:], pd.DataFrame(data.loc['2021-01-01':]['Close'][31] + df.Close_prediction_change)], axis=1).plot(figsize=(12, 8))
-#         plt.title('Close Absolute Change Prediction (only adding changes)')
-#
-#     else:
-#         pass
-
